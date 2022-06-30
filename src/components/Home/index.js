@@ -32,11 +32,13 @@ const Home = () => {
   ]
 
   useEffect(() => {
-    return () =>
+    function updateAnimation() {
       setTimeout(() => {
         setLetterClass('text-animate-hover')
       }, 4000)
-  }, [])
+    }
+    updateAnimation()
+  })
   return (
     <>
       <div className="container home-page">
@@ -46,7 +48,9 @@ const Home = () => {
             <span className={`${letterClass} _12`}>i,</span>
             <br />
             <span className={`${letterClass} _13`}>I</span>
-            <span className={`${letterClass} _14`}>'m</span>
+            <span className={`${letterClass} _14`}> </span>
+            <span className={`${letterClass} _15`}>a</span>
+            <span className={`${letterClass} _16`}>m</span>
             <AnimatedLetters
               letterClass={letterClass}
               strArray={nameArray}

@@ -15,10 +15,12 @@ import Loader from 'react-loaders'
 const About = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
   useEffect(() => {
-    return () =>
+    function updateAnimation() {
       setTimeout(() => {
         setLetterClass('text-animate-hover')
       }, 3000)
+    }
+    updateAnimation()
   }, [])
   return (
     <>
